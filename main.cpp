@@ -20,10 +20,12 @@ int main() {
 
     // process
     // instead of 5/2 I used 2.5 because there is a bug with using 5/2
-    double area = 2.5 * pow(length, 2) * (sqrt(5 + 2 * sqrt(5)));
+    double area = round(
+        (2.5 * pow(length, 2) * (sqrt(5 + 2 * sqrt(5))))
+        * 100) / 100;
 
     // output
-    std::cout << area << std::endl;
+    std::cout << "Area is " << area << " mm²"<< std::endl;
 
     // output finished
     std::cout << std::endl;
